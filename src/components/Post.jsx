@@ -4,10 +4,10 @@ export function Post() {
   return (
     <article className={styles.post}>
       <header>
-        <div>
-          <img className={styles.avatar} src="https://avatars.githubusercontent.com/u/50590091?v=4.png" />
-          <div className={styles.author}>
-            <strong>Gabriel Moura</strong>
+        <div className={styles.author}>
+          <img className={styles.avatar} src="https://avatars.githubusercontent.com/u/2254731?v=4.png" />
+          <div className={styles.authorInfo}>
+            <strong>Diego Fernandes</strong>
             <span>Web Developer</span>
           </div>
         </div>
@@ -19,10 +19,28 @@ export function Post() {
 
         <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀 </p>
 
-        <p> <a href="#">👉 jane.design/doctorcare </a> </p>
+        <p>👉{' '}  <a href="#">jane.design/doctorcare </a> </p>
 
-        <p> <a href=""> #novoprojeto #nlw #rocketseat </a> </p>
+        <p>
+          <a href=""> #novoprojeto </a>{' '}
+          <a href=""> #nlw </a>{' '}
+          <a href=""> #rocketseat </a>
+        </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu comentário</strong>
+
+        <textarea
+          placeholder="Escreva um comentário"
+        />
+
+        <footer>
+          <button type="submit"> Publicar</button>
+        </footer>
+      </form>
+
+
     </article>
   )
 }
