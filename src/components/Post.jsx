@@ -17,6 +17,7 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   })
 
+
   function handleCreateNewComment() {
     event.preventDefault()
 
@@ -27,7 +28,12 @@ export function Post({ author, publishedAt, content }) {
 
 
   function handleNewCommentChange() {
+    event.target.setCustomValidity('')
     setNewCommentText(event.target.value)
+  }
+
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity('Escreva algum comentário (obrigatório)')
   }
 
   function deleteComment(commentDelete) {
@@ -35,6 +41,8 @@ export function Post({ author, publishedAt, content }) {
 
     setComments(commentsWithoutDeleteOne)
   }
+
+  const isNewCommentEmpty = newCommentText === ''
 
   return (
     <article className={styles.post}>
@@ -67,12 +75,14 @@ export function Post({ author, publishedAt, content }) {
           placeholder="Escreva um comentário"
           onChange={handleNewCommentChange}
           value={newCommentText}
+          onInvalid={handleNewCommentInvalid}
+          required
         />
 
         <footer>
           <button
             type="submit"
-            disabled={newCommentText === ''}
+            hidden={isNewCommentEmpty}
           > Publicar</button>
         </footer>
       </form>
