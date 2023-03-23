@@ -1,4 +1,4 @@
- <h1 align="center"> Ignite Feed </h1>
+ <h1 align="center"> Ignite Feed  (Front-end)</h1>
 
 ### Ignite Feed é um projeto de um feed simples onde cada usuário terá um perfil único, nele poderá postar qualquer conteúdo e outros usuários podem interagir, como comentar, curtir...
 
