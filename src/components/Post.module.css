@@ -100,7 +100,7 @@
   margin-top: 1rem;
   border-radius: 8px;
   border: 0;
-  background: var(--green-500);
+  background: var(--green-300);
   color: var(--white);
   font-weight: bold;
   cursor: pointer;
@@ -108,8 +108,17 @@
   transition: background-color 0.1s;
 }
 
-.commentForm button[type=submit]:hover {
-  background: var(--green-300);
+.commentForm button[type=submit]:disabled {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.1s;
 }
 
 .commentList {
